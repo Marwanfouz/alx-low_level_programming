@@ -1,49 +1,43 @@
 #include "main.h"
 
 /**
-* main - check the code
-*
-* Return: Always 0.
-*/
+ * create_file - creates a file
+ * @filename: name of the file to create
+ * @text_content: NULL terminated string to write to the file
+ *
+ * Return: 1 on success, -1 on failure
+ */
 
-ssize_t read_textfile(const char *filename, size_t letters)
+int create_file(const char *filename, char *text_content)
 {
-int fd;
-char *buf;
-ssize_t read_count, write_count;
+int fd, len, write_count;
 
 if (filename == NULL)
-return (0);
+return (-1);
 
-buf = malloc(sizeof(char) * letters);
-if (buf == NULL)
-return (0);
+fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
-fd = open(filename, O_RDONLY);
 if (fd == -1)
+return (-1);
+
+if (text_content == NULL)
 {
-free(buf);
-return (0);
+close(fd);
+return (1);
 }
 
-read_count = read(fd, buf, letters);
-if (read_count == -1)
+for (len = 0; text_content[len]; len++)
+;
+
+write_count = write(fd, text_content, len);
+
+if (write_count == -1 || write_count != len)
 {
-free(buf);
 close(fd);
-return (0);
+return (-1);
 }
 
-write_count = write(STDOUT_FILENO, buf, read_count);
-if (write_count == -1 || write_count != read_count)
-{
-free(buf);
-close(fd);
-return (0);
-}
-
-free(buf);
 close(fd);
 
-return (write_count);
+return (1);
 }
