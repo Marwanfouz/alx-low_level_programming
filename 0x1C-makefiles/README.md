@@ -14,6 +14,13 @@
 <li><a href="/rltoken/moIpBFMN3sJcVMNn5VIFlA" title="Makefile" target="_blank">Makefile</a></li>
 <li><a href="/rltoken/1AUviCUw3TrznESzWbrKAQ" title="Installing the make utility" target="_blank">Installing the make utility</a></li>
 <li><a href="/rltoken/vQFeXLq1izNua2z2dVl5Yg" title="make-official documentation" target="_blank">make-official documentation</a></li>
+
+<li><a href="https://opensource.com/article/18/8/what-how-makefile" target="_blank"></a></li>
+<li><a href="https://www.gnu.org/software/make/manual/html_node/" target="_blank"></a></li>
+<li><a href="https://www.youtube.com/watch?v=a8mPKBxQ9No" target="_blank"></a></li>
+<li><a href="https://www.youtube.com/watch?v=_r7i5X0rXJk" target="_blank"></a></li>
+<li><a href="https://www.youtube.com/watch?v=G5dNorAoeCM" target="_blank"></a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLkH1REggdbJpmQKm8Nu-H8R81_-c00fpB" target="_blank">Arabic Resource</a></li>
 </ul>
 
 <h2>Learning Objectives</h2>
